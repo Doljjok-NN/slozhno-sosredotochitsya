@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="./images/favicon.ico" sizes="any" />
+  <link rel="icon" href="./images/favicon.ico" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/mobile-icon.png">
   <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./styles/variables.css">
   <link rel="stylesheet" href="./styles/style.css">
@@ -21,18 +24,21 @@
     <nav class="header__theme-menu">
       <ul class="header__theme-menu-list">
         <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_light">
+          <button
+            class="header__theme-menu-button header__theme-menu-button_type_light header__theme-menu-button_active">
             День
           </button>
         </li>
         <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+          <button
+            class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto header__theme-menu-button_active"
             disabled>
             Авто
           </button>
         </li>
         <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+          <button
+            class="header__theme-menu-button header__theme-menu-button_type_dark header__theme-menu-button_active">
             Неон
           </button>
         </li>
@@ -42,7 +48,7 @@
     <h1 class="title__logo logo-style">no focus</h1>
 
 
-    <div class="header__prewaiw">
+    <div class="header__preview">
       <p class="title-decor-color text-pink-background">Что делать, когда не можешь делать ничего<br>
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо
       </p>
@@ -58,7 +64,9 @@
         <p class="cards__text text-style">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же
           легендарная многозадачность,
           когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует.
-          Исследователи выяснили, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле
+          Исследователи <a target="_blank" class="link-styles"
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7075496/">выяснили</a>,
+          что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле
           внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны
           стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.
         </p>
@@ -75,7 +83,7 @@
     </section>
     <section class="section concentration">
       <h2 class="section__title pink-text-style  concentration__title-grid">Что снижает концентрацию внимания?</h2>
-      <div class="cards concentration__grid-card">
+      <div class="cards concentration__grid-card mnogo">
         <h2 class="cards__title title-decor-color text-pink-background">Многозадачность</h2>
         <p class="cards__text text-style">Как концентрация может снижаться из-за… концентрации? Любая стрессовая
           ситуация (и резко меняющийся мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду на
@@ -83,7 +91,7 @@
           Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть.
         </p>
       </div>
-      <div class="cards concentration__grid-card">
+      <div class="cards concentration__grid-card food">
         <h2 class="cards__title title-decor-color text-pink-background">Еда</h2>
         <p class="cards__text text-style">«Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно доставляют в
           мозг энергию и помогают ему лучше работать. Но уходит эта энергия также быстро, как и приходит. А мы в
@@ -91,7 +99,7 @@
           чувствуем усталость и сонливость. И хотим ещё больше быстрых углеводов.
         </p>
       </div>
-      <div class="cards concentration__grid-card">
+      <div class="cards concentration__grid-card gadj">
         <h2 class="cards__title title-decor-color text-pink-background">Гаджеты</h2>
         <p class="cards__text text-style">Да-да, это та самая ситуация, когда на экране ноутбука — код, в наушниках —
           подкаст, а на компьютере фоном — ещё и видео с забавными утятами. В результате мозг пытается переключиться с
@@ -128,7 +136,9 @@
         <div class="mini__cards-gold-fish">
           <h2 class="mini__cards_title">Прогуляйтесь</h2>
           <p class="cards__text text-style margin-10">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-            показал, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она
+            <a target="_blank" class="link-styles"
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, что созерцание
+            природы повышает концентрацию, в то время как после просмотра городских пейзажей она
             наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит
             ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный
             вариант.
@@ -153,11 +163,12 @@
     <section class="section pictures">
       <h2 class="cards__title title-decor-color text-pink-background">А можно в картинках?</h2>
       <div class="cards__images">
-        <img class="img__style sunset" src="./images/sunset.png" alt="">
-        <img class="img__style ice-cream" src="./images/ice-cream.png" alt="">
-        <img class="img__style tape" src="./images/tape.png" alt="">
-        <img class="img__style books" src="./images/books.png" alt="">
-        <img class="img__style street" src="./images/street.png" alt="">
+        <img class="img__style sunset" src="./images/sunset.png" alt="Картинка с закатом" loading="lazy">
+        <img class="img__style ice-cream" src="./images/ice-cream.png" alt="Картинка улыбающегося мороженого"
+          loading="lazy">
+        <img class="img__style tape" src="./images/tape.png" alt="Картинка плеера и кассеты" loading="lazy">
+        <img class="img__style books" src="./images/books.png" alt="Картинка с книгами" loading="lazy">
+        <img class="img__style street" src="./images/street.png" alt="Картинка улицы" loading="lazy">
       </div>
     </section>
   </main>

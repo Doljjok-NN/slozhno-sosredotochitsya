@@ -8,14 +8,14 @@
   --accent-color: #ff0070;
   --osnova-font-family: "IBM Plex Mono";
   --osnova-font-size: 18px;
-  --bg-color:rgb(255, 0, 112);
-  --subtitle-content-color:#000028;
+  --bg-color: rgb(255, 0, 112);
+  --subtitle-content-color: #000028;
   --text-color: rgb(241, 178, 206);
-  --element-color:rgb(255, 0, 112);
+  --element-color: rgb(255, 0, 112);
   --title-color: rgb(219, 0, 255);
-  --shadow-color:rgb(255, 0, 112);
-  --display:none;
-  --accent-background-image: url("../images/cover-image-dark.png")
+  --shadow-color: #ff0070;
+  --display: inline-block;
+  --accent-background-image: url("../images/cover-image-dark.png");
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -25,6 +25,6 @@
 @media (prefers-color-sheme: dark) {
   .page {
     --accent-background-image: url("../images/cover-image-dark.png");
-    --display:none;
+    --display: none;
   }
 }
