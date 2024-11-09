@@ -84,9 +84,9 @@
   display: grid;
   grid-template-rows: min-content min-content min-content;
   margin-block-end: clamp(40px, 10%, 60px);
-  /* block-size: 100vh;  */
-  /* min-height: 668px; */
-}
+  block-size: 100vh;  
+  min-height: 668px;
+} 
 
 .decorated__REC {
   position: absolute;
@@ -168,10 +168,11 @@
   border-bottom: 1px solid var(--element-color);
 }
 
-.title__logo {
+.header__logo {
   margin-block-start: clamp(4.6875rem, -2.499rem + 30.6626vw, 17.125rem);
   margin-block-end: clamp(3.4375rem, 1.3068rem + 9.0909vw, 7.125rem);
   text-shadow: 4px 4px 0 var(--shadow-color);
+  
 }
 
 .header__preview {
@@ -179,8 +180,7 @@
   align-self: flex-end;
 }
 
-/* ---------------------------------------------------------------------------- */
-
+/* -----------------------------СЕКЦИИ С ТЕКСТОМ И КАРТИНКАМИ----------------------------------------------- */
 .section {
   margin-block-end: 50px;
 }
@@ -231,6 +231,7 @@
   object-position: center;
 }
 
+/* ----------------------ПОДВАЛ----------------------------------------------- */
 .footer {
   position: relative;
   min-height: 668px;
@@ -243,6 +244,8 @@
   text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
+/* -----------------------МЕДИАЗАПРОСЫ------------------------------------------ */
+
 @media (min-width: 768px) {
   .logo-style {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -253,9 +256,10 @@
     justify-self: end;
   }
 
-  .title__logo {
+  .header__logo {
     margin-block-start: 173px;
     margin-block-end: 162px;
+    margin-left: -10px;
   }
 
   .focus {
@@ -320,6 +324,11 @@
 }
 
 @media (min-width: 1024px) {
+
+  .header__logo {
+    margin-left: -10px;
+  }
+
   .logo-style {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -356,3 +365,4 @@
     grid-column: 3/3;
   }
 }
+/* ----------------------------------------------------------------------------- */
