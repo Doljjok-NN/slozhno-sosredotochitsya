@@ -7,8 +7,6 @@
 .page.theme_light {
   --accent-color: #ff8dcb;
   --osnova-back-and-text-color: rgb(255, 0, 112);
-  --osnova-font-family: "IBM Plex Mono";
-  --osnova-font-size: 18px;
   --bg-color: #fff1f7;
   --subtitle-content-color: #353430;
   --text-color: #353430;
@@ -17,6 +15,7 @@
   --shadow-color: #ff0070;
   --display: none;
   --accent-background-image: url("../images/cover-image-light.png");
+  --page-bg-color:#fff1f7;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -27,6 +26,7 @@
   .page {
     --accent-background-image: url("../images/cover-image-light.png");
     --display: none;
+    background-color: #fff1f7;
   }
 
   .decorated__REC {

@@ -6,6 +6,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--page-bg-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -14,11 +15,11 @@
   pointer-events: none;
   box-sizing: border-box;
   border: 1px solid var(--element-color);
-  font-family: var(--osnova-font-family);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
 }
 
 .logo-style {
-  font-family: var(--osnova-font-family);
+  font-family: "IBM Plex Mono", Arial, Helvetica, monospace;
   font-weight: 700;
   line-height: 82.5%;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
@@ -31,26 +32,26 @@
 
 .text-style {
   color: var(--text-color);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
 }
 
-.text-pink-background {
+.subtitle-content-style {
   color: var(--subtitle-content-color);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
 }
 
-.pink-text-style {
+.element-color-style {
   color: var(--element-color);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
@@ -61,11 +62,11 @@
 }
 
 .link-styles:hover {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .link-styles:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid currentColor;
   outline-offset: -1px;
   box-sizing: border-box;
 }
@@ -79,7 +80,7 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: 1fr min-content 1fr;
   margin-block-end: clamp(40px, 10%, 60px);
   block-size: 100vh;
   min-height: 668px;
@@ -88,8 +89,8 @@
 .decorated__REC {
   position: absolute;
   color: rgb(255, 0, 112);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 400;
   line-height: 25px;
   text-align: center;
@@ -133,7 +134,7 @@
 }
 
 .header__theme-menu {
-  margin-block-start: 65px;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -146,8 +147,8 @@
 .header__theme-menu-button {
   text-transform: lowercase;
   color: var(--element-color);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 400;
   line-height: 18px;
   text-align: center;
@@ -166,51 +167,39 @@
 }
 
 .header__logo {
-  margin-block-start: clamp(4.6875rem, -2.499rem + 30.6626vw, 17.125rem);
-  margin-block-end: clamp(3.4375rem, 1.3068rem + 9.0909vw, 7.125rem);
   text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 .header__preview {
-  margin-block-end: 56px;
-  align-self: flex-end;
+  align-self: center;
 }
 
 /* -----------------------------СЕКЦИИ С ТЕКСТОМ И КАРТИНКАМИ----------------------------------------------- */
-.section {
-  margin-block-end: 50px;
+
+.main {
+  display: grid;
+  gap: 50px;
 }
 
 .section__title {
-  max-width: 355px;
   margin-block-end: 20px;
 }
 
 .cards__title {
   margin-block-end: 10px;
-}
-
-.cards {
-  margin-block-end: 20px;
-}
-
-.title-gold-fish {
-  margin-block-end: 20px;
+  margin-block-start: 10px;
 }
 
 .mini__cards_title {
   color: var(--subtitle-content-color);
   background-color: var(--accent-color);
-  font-family: var(--osnova-font-family);
-  font-size: var(--osnova-font-size);
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-size: var(--osnova-size);
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
-  margin-block-end: 10px;
-}
-
-.margin-10 {
-  margin-block-end: 10px;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
 }
 
 .cards__images {
@@ -228,8 +217,9 @@
 
 /* ----------------------ПОДВАЛ----------------------------------------------- */
 .footer {
-  position: relative;
+  block-size: 100vh;
   min-height: 668px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,15 +242,24 @@
   }
 
   .header__logo {
-    margin-block-start: 173px;
-    margin-block-end: 162px;
     margin-left: -10px;
   }
 
-  .focus {
+  .main {
+    gap: 80px;
+  }
+
+  .section__title {
+    margin-block-end: 0;
+  }
+
+  .section-style {
+    gap: 20px;
+  }
+
+  .grid-display {
     display: grid;
     grid-template-columns: 236px 1fr;
-    gap: 10px;
   }
 
   .focus__title-grid {
@@ -271,12 +270,6 @@
     grid-column: 2/4;
   }
 
-  .concentration {
-    display: grid;
-    grid-template-columns: 236px 1fr;
-    grid-template-rows: min-content 1fr 1fr 1fr;
-  }
-
   .concentration__title-grid {
     grid-column: 1/2;
   }
@@ -285,34 +278,28 @@
     grid-column: 1/4;
   }
 
-  .gold-fish {
-    display: grid;
-    grid-template-columns: 236px 1fr;
-    gap: 10px;
-  }
-
   .cards__images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .sunset {
+  .img-sunset {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  .ice-cream {
+  .img-ice-cream {
     grid-column: 3/4;
     grid-row: 1/3;
   }
-  .tape {
+  .img-tape {
     grid-column: 1/2;
     grid-row: 2/4;
   }
-  .books {
+  .img-books {
     grid-column: 2/3;
   }
-  .street {
+  .img-street {
     grid-column: 2/4;
     grid-row: 3/4;
   }
@@ -323,12 +310,12 @@
     margin-left: -10px;
   }
 
-  .logo-style {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  .header__theme-menu {
+    align-self: start;
   }
 
-  .header__theme-menu {
-    margin-block-start: 0;
+  .logo-style {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__theme-menu-list {
@@ -340,23 +327,25 @@
     min-width: 491px;
   }
 
-  .concentration {
+  .grid-display {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-    grid-template-rows: min-content 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(236px, 315px) minmax(315px, 1fr)
+    );
+    grid-template-rows: min-content, 1fr;
   }
 
-  .mnogo {
+  .grid-name-multitasking {
     grid-column: 1/2;
   }
 
-  .food {
+  .grid-name-food {
     grid-column: 2/3;
   }
 
-  .gadj {
-    grid-column: 3/3;
+  .grid-name-gadgets {
+    grid-column: 3/4;
   }
 }
 /* ----------------------------------------------------------------------------- */
