@@ -15,7 +15,6 @@
   pointer-events: none;
   box-sizing: border-box;
   border: 1px solid var(--element-color);
-  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
 }
 
 .logo-style {
@@ -33,7 +32,7 @@
 .text-style {
   color: var(--text-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
@@ -42,7 +41,7 @@
 .subtitle-content-style {
   color: var(--subtitle-content-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
@@ -51,7 +50,7 @@
 .element-color-style {
   color: var(--element-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
@@ -71,6 +70,10 @@
   box-sizing: border-box;
 }
 
+.section-style div:not(:last-child) {
+  margin-block-end: 20px;
+}
+
 .container {
   padding: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
 }
@@ -81,7 +84,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-block-end: clamp(40px, 10%, 60px);
+  margin-block-end: clamp(20px, 10%, 40px);
   block-size: 100vh;
   min-height: 668px;
 }
@@ -90,12 +93,12 @@
   position: absolute;
   color: rgb(255, 0, 112);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   text-align: center;
-  right: 40px;
-  top: 10px;
+  right: 49px;
+  top: 17px;
   display: var(--display);
 }
 
@@ -108,7 +111,7 @@
   height: 9px;
   border-radius: 50%;
   top: 8px;
-  margin-inline-start: 14px;
+  margin-inline-start: 12px;
 }
 
 .decorated-zone::before {
@@ -118,8 +121,8 @@
   height: 25px;
   border-top: 1px solid var(--element-color);
   border-right: 1px solid var(--element-color);
-  top: 10px;
-  right: 10px;
+  top: 18px;
+  right: 18px;
 }
 
 .decorated-zone::after {
@@ -129,8 +132,8 @@
   height: 25px;
   border-left: 1px solid var(--element-color);
   border-bottom: 1px solid var(--element-color);
-  left: 10px;
-  bottom: 10px;
+  left: 18px;
+  bottom: 18px;
 }
 
 .header__theme-menu {
@@ -148,7 +151,7 @@
   text-transform: lowercase;
   color: var(--element-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   text-align: center;
@@ -158,7 +161,7 @@
 
 .header__theme-menu-button:hover {
   box-sizing: border-box;
-  border: 1px solid var(--element-color);
+  border: 1px solid var(--button-border);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -187,19 +190,21 @@
 
 .cards__title {
   margin-block-end: 10px;
-  margin-block-start: 10px;
+}
+
+.title-gold-fish {
+  margin-block-end: 20px;
 }
 
 .mini__cards_title {
   color: var(--subtitle-content-color);
   background-color: var(--accent-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
-  font-size: var(--osnova-size);
+  font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
-  margin-block-start: 20px;
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 
 .cards__images {
@@ -217,6 +222,7 @@
 
 /* ----------------------ПОДВАЛ----------------------------------------------- */
 .footer {
+  margin-block-start: clamp(25px, 10%, 45px);
   block-size: 100vh;
   min-height: 668px;
   position: relative;
@@ -236,17 +242,26 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .header {
+    min-height: 1020px;
+    margin-block-end: clamp(29px, 10%, 49px);
+  }
+
   .header__preview {
     max-width: 364px;
     justify-self: end;
   }
 
   .header__logo {
-    margin-left: -10px;
+    margin-left: -14px;
   }
 
   .main {
     gap: 80px;
+  }
+
+  .section-style div:not(:last-child) {
+    margin-block-end: 0;
   }
 
   .section__title {
@@ -254,12 +269,16 @@
   }
 
   .section-style {
-    gap: 20px;
+    column-gap: 20px;
   }
 
   .grid-display {
     display: grid;
     grid-template-columns: 236px 1fr;
+  }
+
+  .grid-display div:not(:last-child) {
+    margin-block-end: 20px;
   }
 
   .focus__title-grid {
@@ -270,12 +289,27 @@
     grid-column: 2/4;
   }
 
-  .concentration__title-grid {
-    grid-column: 1/2;
+  .concentration-title {
+    max-width: 236px;
+    margin-block-end: 20px;
   }
 
-  .concentration__grid-card {
-    grid-column: 1/4;
+  .style-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .concentration-card {
+    flex: 1 1 auto;
+  }
+
+  .pictures-title {
+    margin-block-end: 10px;
+  }
+
+  .section-pictures {
+    margin-block-start: 45px;
   }
 
   .cards__images {
@@ -303,11 +337,15 @@
     grid-column: 2/4;
     grid-row: 3/4;
   }
+
+  .footer {
+    min-height: 1020px;
+  }
 }
 
 @media (min-width: 1024px) {
   .header__logo {
-    margin-left: -10px;
+    margin-left: -18px;
   }
 
   .header__theme-menu {
@@ -328,24 +366,20 @@
   }
 
   .grid-display {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .concentration-title {
+    max-width: 315px;
+  }
+
+  .style-wrapper {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(236px, 315px) minmax(315px, 1fr)
-    );
-    grid-template-rows: min-content, 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid-name-multitasking {
-    grid-column: 1/2;
-  }
-
-  .grid-name-food {
-    grid-column: 2/3;
-  }
-
-  .grid-name-gadgets {
-    grid-column: 3/4;
+  .pictures-title {
+    margin-block-end: 20px;
   }
 }
 /* ----------------------------------------------------------------------------- */

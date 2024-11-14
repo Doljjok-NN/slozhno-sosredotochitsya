@@ -5,7 +5,6 @@
 
 :root {
   --accent-color: #ff0070;
-  --osnova-size: 18px;
   --bg-color: rgb(255, 0, 112);
   --subtitle-content-color: #000028;
   --text-color: rgb(241, 178, 206);
@@ -14,6 +13,6 @@
   --shadow-color: rgb(255, 0, 112);
   --display: inline-block;
   --accent-background-image: url("../images/cover-image-dark.png");
-  --page-bg-color:#000028;
-  
+  --page-bg-color: #000028;
+  --button-border: rgba(255, 0, 112, 0.4);
 }

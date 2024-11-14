@@ -15,7 +15,8 @@
   --shadow-color: #ff0070;
   --display: none;
   --accent-background-image: url("../images/cover-image-light.png");
-  --page-bg-color:#fff1f7;
+  --page-bg-color: #fff1f7;
+  --button-border: rgba(50, 49, 45, 0.4);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -26,7 +27,19 @@
   .page {
     --accent-background-image: url("../images/cover-image-light.png");
     --display: none;
-    background-color: #fff1f7;
+    --background-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --osnova-back-and-text-color: rgb(255, 0, 112);
+    --bg-color: #fff1f7;
+    --subtitle-content-color: #353430;
+    --text-color: #353430;
+    --element-color: #353430;
+    --title-color: #ffc2e6;
+    --shadow-color: #ff0070;
+    --display: none;
+    --accent-background-image: url("../images/cover-image-light.png");
+    --page-bg-color: #fff1f7;
+    --button-border: rgba(50, 49, 45, 0.4);
   }
 
   .decorated__REC {
@@ -34,6 +47,18 @@
   }
 }
 
-/* :root {
+:root {
   --accent-color: #ff8dcb;
-}  */
+  --accent-color: #ff8dcb;
+  --osnova-back-and-text-color: rgb(255, 0, 112);
+  --bg-color: #fff1f7;
+  --subtitle-content-color: #353430;
+  --text-color: #353430;
+  --element-color: #353430;
+  --title-color: #ffc2e6;
+  --shadow-color: #ff0070;
+  --display: none;
+  --accent-background-image: url("../images/cover-image-light.png");
+  --page-bg-color: #fff1f7;
+  --button-border: rgba(50, 49, 45, 0.4);
+}
